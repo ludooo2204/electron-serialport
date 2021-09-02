@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello World!!</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <style>
         table { border-collapse: collapse; }
         table, th, td { border: 1px solid black; }
@@ -11,14 +14,22 @@
 </head>
 
 <body>
-    <h1>Hello World!</h1>
+    <div id="root"></div>
+    <script src="./app.js" type="text/babel">
+    </script>
 
     We are using Node.js <span id="node-version"></span>, Chromium <span id="chrome-version"></span>, Electron <span id="electron-version"></span>, and Serialport <span id="serialport-version"></span>
+<button id="click">connection</button>
+<button id="click2">measure?</button>
+<button id="click3">save?</button>
+<button id="click4">write?</button>
+<form id="inputForm" onsubmit="return false">
+    <input type="number"  id="inputValue"></input>
 
+</form>
     <div id="error"></div>
     <div id="ports"></div>
 </body>
 
 <script src="./renderer.js"></script>
-
 </html>
